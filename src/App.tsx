@@ -1,5 +1,7 @@
 import { Header } from "./components/header"
-import { Hero } from "./components/hero"
+import { Hero } from "./components/Hero"
+import { About } from "./components/about"
+
 
 function App() {
 
@@ -7,8 +9,9 @@ function App() {
     <>
       <Header />
       <Hero />
+      <About />
     </>
-  )
+  );
 }
 
 export default App
