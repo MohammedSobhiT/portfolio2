@@ -2,8 +2,10 @@ import { StickyCards } from "./StickyCards";
 
 export const About = () => {
   return (
-    <div className="h-[200dvh] min-h-fit ">
-      <h1 className="text-[12.5rem] text-right pt-20 px-6 text-[#191917]">About Me.</h1>
+    <div className="h-dvh py-40 min-h-fit  bg-[#f3f3f0]">
+      <h1 className="text-[12.5rem] text-right leading-none  px-6 text-[#191917]">
+        About Me.
+      </h1>
       <StickyCards
         slideNum="01"
         topLeftText="When the Path Wasn’t Clear"
