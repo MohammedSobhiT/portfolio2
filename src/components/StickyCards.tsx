@@ -25,7 +25,7 @@ slideNum,
       <div className="grid grid-cols-10 col-span-5 h-full border-t pt-10 pb-20">
         <div className="flex flex-col col-span-4 justify-between items-start h-full">
           <h2 className="text-3xl font-medium uppercase">{topLeftText}</h2>
-          <p className="text-sm font-bold italic">{bottomLeftText}</p>
+          <p className="text-sm font-bold italic">&bull; {bottomLeftText}</p>
         </div>
         <div className="filler"></div>
         <div className="flex flex-col col-span-5 gap-6 justify-between h-full">

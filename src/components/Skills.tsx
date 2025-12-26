@@ -22,7 +22,7 @@ useEffect(() => {
       const rect = items[i].getBoundingClientRect();
 
       const isInView =
-        rect.top < window.innerHeight * 0.5 &&
+        rect.top < window.innerHeight * .6 &&
         rect.bottom > window.innerHeight * 0.4;
 
       if (isInView) {
@@ -40,18 +40,16 @@ useEffect(() => {
 
 
   return (
-    <div className=" py-40 px-6 flex items-start gap-6 bg-[#191917]">
-      <h1 className="skills-title text-5xl text-[#f3f3f0] rotate-180 ">
-        Skills.
-      </h1>
+    <div className="py-40 px-6 flex items-start gap-6 bg-[#191917]">
+      <h1 className="skills-title text-5xl text-white rotate-180 ">Skills.</h1>
 
-      <ul ref={listRef} className="text-7xl flex flex-col gap-8">
+      <ul ref={listRef} className="text-7xl flex flex-col gap-2">
         {skills.map((skill, index) => (
           <li
             key={index}
-            className={` transition-all duration-700 ease-out font-bold ${
+            className={` transition-all duration-700 ease-out font-medium  ${
               visibleIndex === index
-                ? "text-[#f3f3f0] scale-105 "
+                ? "text-white scale-105 "
                 : "text-[#f3f3f05f]"
             }`}
           >
