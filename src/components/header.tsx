@@ -14,7 +14,7 @@ export const Header = () => {
   return (
     <header className="  z-9999  fixed w-full">
           <StaggeredMenu
-            isFixed={true}
+            isFixed={false}
             position="right"
             items={menuItems}
             socialItems={socialItems}

@@ -7,9 +7,6 @@ body{
   letter-spacing: -.04em;
 }
 canvas {
-  /*width: 1616px !important;
-    */
-  height: 775px !important;
   transform: scale(1.3);
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
@@ -28,3 +25,4 @@ header a {
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: vertical-lr;
 }
+
