@@ -1,12 +1,18 @@
 import { StickyCards } from "./StickyCards";
 
-export const About = () => {
+interface AboutProps {
+  isDark: boolean;
+}
+
+export const About = ({ isDark }: AboutProps) => {
   return (
-    <div className="h-dvh py-40 min-h-fit  bg-[#f3f3f0]">
-      <h1 className="text-[12.5rem] text-right leading-none  px-6 text-[#191917]">
+    
+    <div id="about" className="xl:h-dvh h-fit  md:py-40 py-20 min-h-fit">
+      <h1 className="md:text-[12.5rem] text-[4rem] md:text-right leading-none px-6 text-white mix-blend-difference">
         About Me.
       </h1>
       <StickyCards
+        isDark={isDark}
         slideNum="01"
         topLeftText="When the Path Wasn’t Clear"
         topRightText={
@@ -34,6 +40,7 @@ export const About = () => {
         }
       />
       <StickyCards
+        isDark={isDark}
         slideNum="02"
         topLeftText="Shipping Real Products"
         topRightText={
@@ -61,6 +68,7 @@ export const About = () => {
       />
 
       <StickyCards
+        isDark={isDark}
         slideNum="03"
         topLeftText="From Learning to Teaching"
         topRightText={
@@ -85,6 +93,7 @@ export const About = () => {
       />
 
       <StickyCards
+        isDark={isDark}
         slideNum="04"
         topLeftText="Growing Under Pressure"
         topRightText={

@@ -1254,9 +1254,10 @@ const defaultItems: MenuItem[] = [
 interface InfiniteMenuProps {
   items?: MenuItem[];
   scale?: number;
+  isDark?: boolean;
 }
 
-const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
+const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0, isDark }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(
     null
   ) as MutableRefObject<HTMLCanvasElement | null>;
@@ -1308,11 +1309,13 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
   };
 
   return (
-    <div className="overflow-visible relative w-full h-full bg-[#f3f3f0">
+    <div className="overflow-visible relative w-full h-full ">
       <canvas
         id="infinite-grid-menu-canvas"
         ref={canvasRef}
-        className="cursor-grab w-full h-full overflow-visible relative outline-none active:cursor-grabbing bg-[#f3f3f0"
+        className={`cursor-grab w-full h-full overflow-visible relative outline-none active:cursor-grabbing  ${
+          isDark ? "text-white" : "text-[#191917]"
+        }`}
       />
 
       {activeItem && (
@@ -1321,14 +1324,16 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
             className={`
           select-none
           absolute
-          font-[#191917]
-          text-5xl
-          w-10
+          ${isDark ? "text-white" : "text-[#191917]"}
+          md:text-5xl
+          text-4xl
+          md:w-10
           left-0
-          top-1/2
+          md:top-1/2
+          top-4
           transform
-          translate-x-[20%]
-          -translate-y-1/2
+          md:translate-x-[20%]
+          md:-translate-y-1/2          
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${
@@ -1343,12 +1348,17 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [], scale = 1.0 }) => {
 
           <p
             className={`
+              ${isDark ? "text-white" : "text-[#191917]"}
+              
         text-xs
           select-none
           absolute
-          w-45
-          top-1/2
+          md:w-45
+          w-60
+          md:top-1/2
           -right-40
+          top-[95%]
+          
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           ${
