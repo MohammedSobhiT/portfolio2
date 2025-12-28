@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from "./components/footer";
 import { LoadingScreen } from "./components/LoadingScreen";
-
+import { Analytics } from "@vercel/analytics/react";
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -98,6 +98,7 @@ function App() {
         <div id="work-section"><Work isDark={isDark} /></div>
         <div id="footer-section"><Footer isDark={isSecondaryBg} /></div>
       </div>
+      <Analytics />
     </>
   );
 }

@@ -49,7 +49,7 @@ const Footer = ({ isDark }: FooterProps) => {
               Email Me
             </a>
             <a
-              href="https://wa.me/01551438487"
+              href="https://wa.me/+201551438487"
               target="_blank"
               rel="noopener noreferrer"
               className={`inline-block py-3 px-8 border ${
