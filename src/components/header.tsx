@@ -36,7 +36,7 @@ export const Header = ({ isDark, toggleTheme, isSecondaryBg }: HeaderProps) => {
 
   return (
     <header className="  z-9999  relative w-full pointer-events-none">
-          <div className="absolute top-14 md:top-4 left-6 md:left-1/2 transform -translate-x-1/2 text-center pointer-events-auto z-50 mix-blend-difference">
+          <div className="fixed top-14 md:top-4 left-6 md:left-1/2 transform -translate-x-1/2 text-center pointer-events-auto z-50 mix-blend-difference">
              <button 
                 onClick={toggleTheme}
                 className="text-lg tracking-widest cursor-pointer transition-opacity duration-300 hover:opacity-80"
@@ -46,16 +46,16 @@ export const Header = ({ isDark, toggleTheme, isSecondaryBg }: HeaderProps) => {
              </button>
           </div>
           <StaggeredMenu
-            isFixed={false}
+            isFixed={true}
             position="right"
             items={menuItems}
             socialItems={socialItems}
             displaySocials={true}
             displayItemNumbering={true}
             menuButtonColor={menuButtonColor}
-            openMenuButtonColor={openMenuButtonColor} // Keep same color when open if desired, or swap.
+            openMenuButtonColor={openMenuButtonColor} 
             changeMenuColorOnOpen={false}
-            colors={isDark ? ["#191917", "#f3f3f0"] : ["#fff", "#191917"]} // Swap slide colors
+            colors={isDark ? ["#191917", "#f3f3f0"] : ["#fff", "#191917"]}
             accentColor="#ff6b6b"
             panelBackgroundColor={panelBg}
             menuItemTextColor={itemText}

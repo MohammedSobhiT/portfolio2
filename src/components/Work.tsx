@@ -12,9 +12,9 @@ export const Work = ({ isDark }: WorkProps) => {
     {
       image: project2,
       link: "https://rey203.vercel.app/",
-      title: "Rey.",
+      title: "Rey .Personal.",
       description:
-        "A full-featured e-commerce platform with admin dashboard, advanced product filtering, real-time API integration, and smooth scroll animations.",
+        "A full-featured e-commerce platform.",
     },
     {
       image: project3,
@@ -25,9 +25,9 @@ export const Work = ({ isDark }: WorkProps) => {
     {
       image: project1,
       link: "https://thecustomchef.com/?srsltid=AfmBOoql1FY0qjD4AeiK-hm0p4Kn8X3r6fUPIMDneQlzMfTtlvKQNFZE",
-      title: "TCC.",
+      title: "TCC .Nockta.",
       description:
-        "A fully customized professional Shopify e-commerce store combining Shopify Liquid with React, GraphQL Storefront API, and GSAP animations for a smooth, high-performance user experience.",
+        "A fully customized Shopify store combining Shopify Liquid with React, GraphQL Storefront API, and GSAP ",
     },
   ];
 
@@ -41,7 +41,7 @@ export const Work = ({ isDark }: WorkProps) => {
       </div>
 
       <h1
-        className={`md:text-[12.5rem] text-[4rem] md:text-right leading-none  md:mb-20 text-white mix-blend-difference`}
+        className={`md:text-[12.5rem] text-[4rem] md:text-right leading-none md:text-white  md:mb-20 ${isDark ? "text-white" : "text-[#191917]"} mix-blend-difference`}
       >
         Work.
       </h1>

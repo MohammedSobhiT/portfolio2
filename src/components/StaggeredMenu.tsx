@@ -505,12 +505,14 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
         >
           <div
             ref={headerTextRef}
-            className="font-satoshi pointer-events-auto"
+            className="font-satoshi pointer-events-auto "
           >
-            <p className="text-base leading-tight m-0">
+            <p className="text-base leading-tight m-0 mix-blend-difference">
               Developer By Practice & Curiosity
             </p>
-            <p className="text-xs leading-tight m-0">FOR TOP 1%</p>
+            <p className="text-xs leading-tight m-0 mix-blend-difference">
+              FOR TOP 1%
+            </p>
           </div>
           <button
             ref={toggleBtnRef}

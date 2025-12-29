@@ -8,7 +8,7 @@ export const About = ({ isDark }: AboutProps) => {
   return (
     
     <div id="about" className="xl:h-dvh h-fit  md:py-40 py-20 min-h-fit">
-      <h1 className="md:text-[12.5rem] text-[4rem] md:text-right leading-none px-6 text-white mix-blend-difference">
+      <h1 className={`md:text-[12.5rem] text-[4rem] md:text-right leading-none px-6 md:text-white ${isDark ? "text-white" : "text-[#191917]"} mix-blend-difference`}>
         About Me.
       </h1>
       <StickyCards

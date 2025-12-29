@@ -23,13 +23,16 @@ import { MdOutlineWaves } from "react-icons/md";
 import { TbBrandThreejs } from "react-icons/tb";
 
 
+interface SkillsProps {
+  isDark: boolean;
+}
 interface SkillItem {
   name: string;
   icon: JSX.Element;
   category: 'frontend' | 'styling' | 'e-commerce' | 'version-control' |'backend' |'tools'|'testing'|'design';
 }
 
-export const Skills = () => {
+export const Skills = ({isDark}: SkillsProps) => {
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
@@ -171,7 +174,7 @@ export const Skills = () => {
 
   return (
     <section id="skills" className="md:h-dvh  md:pb-40  px-6">
-      <h2 className="md:text-[12.5rem] text-[4rem] md:text-right leading-none  text-white mix-blend-difference mb-12">
+      <h2 className={`md:text-[12.5rem] text-[4rem] md:text-right leading-none md:text-white  ${isDark ? "text-white" : "text-[#191917]"} mix-blend-difference mb-12`}>
         Skills.
       </h2>
       <div className="flex flex-col-reverse  items-center md:justify-center justify-between h-full">
@@ -180,7 +183,7 @@ export const Skills = () => {
             <motion.button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`md:px-4 px-2 py-2 w-fit md:text-sm text-xs rounded-full transition-all text-white mix-blend-difference  cursor-pointer${
+              className={`md:px-4 px-2 py-2 w-fit md:text-sm text-xs rounded-full transition-all md:text-white ${isDark ? "text-white" : "text-[#191917]"} mix-blend-difference  cursor-pointer${
                 activeCategory === category.id
                   ? "scale-120 font-bold  "
                   : " opacity-70 hover:opacity-100 "
@@ -193,7 +196,7 @@ export const Skills = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-11 grid-cols-5 items-center justify-center w-full gap-4 text-white h-fit">
+        <div className={`grid md:grid-cols-11 grid-cols-5 items-center justify-center w-full gap-4 md:text-white ${isDark ? "text-white" : "text-[#191917]"} h-fit`}>
           {filteredSkills.map((skill) => (
             <motion.div
               key={skill.name}
