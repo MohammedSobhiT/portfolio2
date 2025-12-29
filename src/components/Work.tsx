@@ -12,7 +12,7 @@ export const Work = ({ isDark }: WorkProps) => {
     {
       image: project2,
       link: "https://rey203.vercel.app/",
-      title: "Rey .Personal.",
+      title: "Rey.",
       description:
         "A full-featured e-commerce platform.",
     },
